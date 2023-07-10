@@ -73,6 +73,12 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
   };
 
   @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
